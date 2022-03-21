@@ -1,10 +1,14 @@
 import "./App.scss";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Articles from "./pages/Articles";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello Web3</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Articles />} />
+      </Routes>
+    </Router>
   );
 }
 
