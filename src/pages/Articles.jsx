@@ -20,21 +20,6 @@ export default function Articles() {
     console.log(articles);
   }, []);
 
-  const responsive = {
-    0: {
-      items: 1,
-    },
-    1200: {
-      items: 3,
-    },
-    1920: {
-      items: 3,
-    },
-    2560: {
-      items: 4,
-    },
-  };
-
   return (
     <div>
       <TextHeading text="For You From Chainwhiz" />
@@ -45,10 +30,8 @@ export default function Articles() {
         disableDotsControls={true}
         renderNextButton={(_) => <NextButton />}
         renderPrevButton={(_) => (true ? null : <PrevioustButton />)}
-        // responsive={responsive}
         paddingLeft={16}
         paddingRight={176}
-        // swipeExtraPadding={160}
         children={[
           <ArticleCarouselItem />,
           <ArticleCarouselItem />,
