@@ -1,0 +1,36 @@
+.article-item {
+  width: 444px;
+  padding: 2rem 1rem;
+  margin: 1rem 2rem;
+
+  p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 44.5px;
+    text-align: center;
+    letter-spacing: 1%;
+    margin: 2rem 0;
+  }
+}
+
+.article-item:hover {
+  outline: solid 2px #d4ff1e;
+}
+
+.img {
+  height: 300px;
+  background-color: #c4c4c4 !important;
+}
+
+.carousel-button {
+  background-color: #dbff0d !important;
+  color: black !important;
+  height: 4rem !important;
+  width: 4rem !important;
+}
+
+.prev-button {
+  margin: auto 0 auto auto;
+}
