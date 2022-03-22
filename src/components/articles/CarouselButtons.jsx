@@ -6,7 +6,7 @@ import "./ArticleComponents.scss";
 
 export function NextButton() {
   return (
-    <Avatar className="carousel-button">
+    <Avatar className="carousel-button next-button">
       <ArrowForwardIcon />
     </Avatar>
   );

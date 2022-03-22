@@ -1,7 +1,7 @@
 .article-item {
   width: 444px;
-  padding: 2rem 1rem;
-  margin: 1rem 2rem;
+  padding: 3rem 2rem;
+  margin: 1rem 3rem;
 
   p {
     color: white;
@@ -17,6 +17,7 @@
 
 .article-item:hover {
   outline: solid 2px #d4ff1e;
+  border-radius: 11px;
 }
 
 .img {
@@ -29,6 +30,10 @@
   color: black !important;
   height: 4rem !important;
   width: 4rem !important;
+}
+
+.next-button {
+  margin: auto 10% auto auto;
 }
 
 .prev-button {

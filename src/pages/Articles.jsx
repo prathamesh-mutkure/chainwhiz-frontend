@@ -44,7 +44,7 @@ export default function Articles() {
         mouseTracking
         disableDotsControls={true}
         renderNextButton={(_) => <NextButton />}
-        renderPrevButton={(_) => <PrevioustButton />}
+        renderPrevButton={(_) => (true ? null : <PrevioustButton />)}
         // responsive={responsive}
         children={[
           <ArticleCarouselItem />,
