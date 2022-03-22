@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Articles.scss";
 import { getAllArticles } from "../api/articles_api";
-import Carousel from "react-material-ui-carousel";
 import TextHeading from "../components/misc/TextHeading";
 import ArticleCarouselItem from "../components/articles/ArticleCarouselItem";
 import AliceCarousel from "react-alice-carousel";
