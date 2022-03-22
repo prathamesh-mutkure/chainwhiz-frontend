@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./Articles.scss";
 import { getAllArticles } from "../api/articles_api";
 import TextHeading from "../components/misc/TextHeading";
 import ArticleCarouselItem from "../components/articles/ArticleCarouselItem";
@@ -9,6 +8,7 @@ import {
   PrevioustButton,
 } from "../components/articles/CarouselButtons";
 import "react-alice-carousel/lib/alice-carousel.css";
+import "./Articles.scss";
 
 export default function Articles() {
   const [articles, setArticles] = useState([]);
@@ -40,12 +40,15 @@ export default function Articles() {
       <TextHeading text="For You From Chainwhiz" />
       <AliceCarousel
         autoWidth
-        autoHeight
         mouseTracking
+        touchTracking
         disableDotsControls={true}
         renderNextButton={(_) => <NextButton />}
         renderPrevButton={(_) => (true ? null : <PrevioustButton />)}
         // responsive={responsive}
+        paddingLeft={16}
+        paddingRight={176}
+        // swipeExtraPadding={160}
         children={[
           <ArticleCarouselItem />,
           <ArticleCarouselItem />,
