@@ -41,7 +41,7 @@ export default function Articles() {
         renderNextButton={(_) => <NextButton />}
         renderPrevButton={(_) => (true ? null : <PrevioustButton />)}
         paddingLeft={16}
-        paddingRight={176}
+        paddingRight={208}
         children={articles.map((article, index) => {
           return (
             <ArticleCarouselItem

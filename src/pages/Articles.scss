@@ -1,3 +1,10 @@
 .alice-carousel__stage-item {
   margin: 1rem 1rem !important;
 }
+
+@media only screen and (max-width: 600px) {
+  .alice-carousel__stage-item {
+    width: 100vw;
+    margin: 0.5rem 0 !important;
+  }
+}
