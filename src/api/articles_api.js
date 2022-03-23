@@ -7,7 +7,7 @@ const parseItem = (item) => {
   const title = doc.querySelector("h3").innerText;
   const img = doc.querySelector("img").src;
 
-  return { title, item };
+  return { link: item.link, title, img };
 };
 
 export const getAllArticles = async () => {

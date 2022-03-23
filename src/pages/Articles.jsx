@@ -24,10 +24,10 @@ export default function Articles() {
   };
 
   useEffect(async () => {
-    const articles = await getAllArticles();
-    setArticles(articles);
-
-    // console.log(articles);
+    (async () => {
+      const articles = await getAllArticles();
+      setArticles(articles);
+    })();
   }, []);
 
   return (
@@ -42,9 +42,14 @@ export default function Articles() {
         renderPrevButton={(_) => (true ? null : <PrevioustButton />)}
         paddingLeft={16}
         paddingRight={176}
-        children={articles.map((article) => {
+        children={articles.map((article, index) => {
           return (
-            <ArticleCarouselItem title={article.title} img={article.img} />
+            <ArticleCarouselItem
+              key={`article${index}`}
+              title={article.title}
+              img={article.img}
+              link={article.link}
+            />
           );
         })}
       />
