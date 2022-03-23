@@ -11,7 +11,7 @@ const parseItem = (item) => {
 };
 
 export const getAllArticles = async () => {
-  return parse("http://localhost:5000/medium")
+  return parse("https://cors-proxy-nodejs.herokuapp.com/medium")
     .then((rss) => {
       const items = rss.items.map(parseItem);
 
