@@ -17,7 +17,7 @@ export default function Articles() {
     const articles = await getAllArticles();
     // setArticles(articles);
 
-    console.log(articles);
+    // console.log(articles);
   }, []);
 
   return (
@@ -33,11 +33,11 @@ export default function Articles() {
         paddingLeft={16}
         paddingRight={176}
         children={[
-          <ArticleCarouselItem />,
-          <ArticleCarouselItem />,
-          <ArticleCarouselItem />,
-          <ArticleCarouselItem />,
-          <ArticleCarouselItem />,
+          <ArticleCarouselItem key="1" />,
+          <ArticleCarouselItem key="2" />,
+          <ArticleCarouselItem key="3" />,
+          <ArticleCarouselItem key="4" />,
+          <ArticleCarouselItem key="5" />,
         ]}
       />
     </div>
