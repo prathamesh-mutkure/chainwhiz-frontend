@@ -1,26 +1,21 @@
 import parse from "rss-to-json";
 
+const parseItem = (item) => {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(item.content, "text/html");
+
+  const title = doc.querySelector("h3").innerText;
+  const img = doc.querySelector("img").src;
+
+  return { title, item };
+};
+
 export const getAllArticles = async () => {
-  const URL = "https://medium.com/feed/articles-more-every-week";
-
-  const CORS_URL = "https://cors-anywhere.herokuapp.com/" + URL;
-
-  return parse(URL)
+  return parse("http://localhost:5000/medium")
     .then((rss) => {
-      console.log(rss);
-      return rss;
+      const items = rss.items.map(parseItem);
+
+      return items;
     })
     .catch(console.error);
-
-  // return fetch(
-  //   "https://cors-anywhere.herokuapp.com/https://medium.com/feed/articles-more-every-week"
-  // )
-  //   .then((res) => res.text())
-  //   .then((data) => {
-  //     const parser = new DOMParser();
-  //     const xml = parser.parseFromString(data, "application/xml");
-  //     console.log(xml);
-  //     return xml;
-  //   })
-  //   .catch(console.error);
 };

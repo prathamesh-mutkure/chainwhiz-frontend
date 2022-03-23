@@ -9,13 +9,23 @@ import {
 } from "../components/articles/CarouselButtons";
 import "react-alice-carousel/lib/alice-carousel.css";
 import "./Articles.scss";
+import parse from "rss-to-json";
 
 export default function Articles() {
   const [articles, setArticles] = useState([]);
 
+  const parseItem = (item) => {
+    const parser = new DOMParser();
+    document = parser.parseFromString(item.content, "text/html");
+
+    console.log(document);
+
+    return item;
+  };
+
   useEffect(async () => {
     const articles = await getAllArticles();
-    // setArticles(articles);
+    setArticles(articles);
 
     // console.log(articles);
   }, []);
@@ -32,13 +42,11 @@ export default function Articles() {
         renderPrevButton={(_) => (true ? null : <PrevioustButton />)}
         paddingLeft={16}
         paddingRight={176}
-        children={[
-          <ArticleCarouselItem key="1" />,
-          <ArticleCarouselItem key="2" />,
-          <ArticleCarouselItem key="3" />,
-          <ArticleCarouselItem key="4" />,
-          <ArticleCarouselItem key="5" />,
-        ]}
+        children={articles.map((article) => {
+          return (
+            <ArticleCarouselItem title={article.title} img={article.img} />
+          );
+        })}
       />
     </div>
   );
