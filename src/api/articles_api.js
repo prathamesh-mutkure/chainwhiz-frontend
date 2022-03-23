@@ -11,7 +11,9 @@ const parseItem = (item) => {
 };
 
 export const getAllArticles = async () => {
-  return parse("https://cors-proxy-nodejs.herokuapp.com/medium")
+  const MEDIUM_URL = process.env.REACT_APP_MEDIUM_API;
+
+  return parse(MEDIUM_URL)
     .then((rss) => {
       const items = rss.items.map(parseItem);
 

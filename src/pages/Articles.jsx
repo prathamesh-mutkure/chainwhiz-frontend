@@ -23,7 +23,7 @@ export default function Articles() {
     return item;
   };
 
-  useEffect(async () => {
+  useEffect(() => {
     (async () => {
       const articles = await getAllArticles();
       setArticles(articles);
