@@ -39,7 +39,7 @@ export default function Articles() {
         touchTracking
         disableDotsControls={true}
         renderNextButton={(_) => <NextButton />}
-        renderPrevButton={(_) => (true ? null : <PrevioustButton />)}
+        renderPrevButton={(_) => <PrevioustButton />}
         paddingLeft={16}
         paddingRight={208}
         children={articles.map((article, index) => {
