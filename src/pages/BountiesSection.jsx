@@ -26,7 +26,7 @@ export default function BountiesSection() {
       <TextHeading text="Latest Bounties" />
 
       <Grid container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 5 }}>
-        {bounties.map((bounty) => {
+        {bounties.slice(0, 4).map((bounty) => {
           return (
             <Grid item xs={6}>
               <LatestBountyCard key={bounty.id} bounty={bounty} />

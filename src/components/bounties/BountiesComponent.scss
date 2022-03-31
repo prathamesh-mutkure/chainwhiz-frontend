@@ -1,17 +1,24 @@
-.Card {
-  background-color: #131313;
-  border: 1px solid #d4ff1e80;
+.card {
+  background-color: #131313 !important;
+  border: 1px solid #d4ff1e80 !important;
 
-  color: white;
+  padding: 1rem;
+
+  color: white !important;
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
   line-height: 3rem;
 }
 
-.Card:hover {
+.card:hover {
   border: 2px solid #d4ff1d;
 }
 
-.Chip {
+.chip {
   background-color: #d4ff1d !important;
+}
+
+.chainwhiz-logo {
+  height: 51px;
+  width: 51px;
 }
